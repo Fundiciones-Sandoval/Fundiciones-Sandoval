@@ -1,0 +1,129 @@
+/* 🌐 Estilo general */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #252222;
+}
+
+/* 🔶 Encabezado */
+header {
+  background: linear-gradient(90deg, #ff6600, #e47830, #4b4444, #292828);
+  padding: 15px 30px;
+  text-align: center;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+header div h1 {
+  text-shadow: 2px 2px 2px #000000;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+text-decoration: none;
+font-weight: 700;
+margin-left: 20px;
+padding-right: 50px;
+color: #ffffff;
+font-size: 20px;
+text-shadow: #ff6600 2px 2px 2px;
+}
+
+nav a:hover {
+    color: #ff6600;
+    text-shadow: #000000 0px 0px 0px;
+    transition: 0.3s;
+}
+
+/* 🔹 Secciones */
+.seccion {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contenido {
+  background-color: #fff5eb;
+}
+
+.gris {
+  background-color: #f4f4f4;
+}
+
+h2 {
+  color: #ff6600;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* 🔸 Footer */
+footer {
+  background: linear-gradient(90deg, #111111, #2c2c2c, #1f1f1f);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 3px solid #ff6600;
+}
+
+footer h2, footer h3 {
+  color: #ff6600;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #ff6600;
+}
+
+.copy {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+/* 📱 Responsive */
+@media (max-width: 700px) {
+  header img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .seccion {
+    padding: 25px;
+    margin: 20px;
+  }
+}

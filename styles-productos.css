@@ -1,0 +1,233 @@
+/* 🔹 GENERAL */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #252222;
+}
+
+/* 🔶 Encabezado */
+header {
+  background: linear-gradient(90deg, #ff6600, #e47830, #4b4444, #292828);
+  padding: 15px 30px;
+  text-align: center;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+header div h1 {
+  text-shadow: 2px 2px 2px #000000;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+text-decoration: none;
+font-weight: 700;
+margin-left: 20px;
+padding-right: 50px;
+color: #ffffff;
+font-size: 20px;
+text-shadow: #ff6600 2px 2px 2px;
+}
+
+nav a:hover {
+    color: #ff6600;
+    text-shadow: #000000 0px 0px 0px;
+    transition: 0.3s;
+}
+
+/* 🔹 INTRODUCCIÓN */
+.intro {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #ff6600;
+}
+
+.intro h2 {
+  color: #ff6600;
+  font-size: 1.8rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.redes li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.redes a {
+  color: #275c77;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.redes a:hover {
+  color: #ff6600;
+}
+
+/* 🔹 PRODUCTOS */
+.productos {
+  padding: 60px 20px;
+  background-color: #fff;
+  box-shadow: inset 0 0 10px rgba(255, 102, 0, 0.15);
+}
+
+.productos h2 {
+  text-align: center;
+  color: #ff6600;
+  font-size: 2rem;
+}
+
+.lista-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  list-style: none;
+  margin-top: 40px;
+  padding: 0;
+}
+
+.lista-productos li {
+  background-color: #f3f1f0;
+  border: 1px solid #ff6600;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.lista-productos li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.lista-productos img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.lista-productos h4 {
+  color: #333;
+  font-size: 1.1rem;
+  margin: 10px 0 5px;
+}
+
+.lista-productos p {
+  color: #424242;
+  font-size: 0.95rem;
+}
+
+.nota {
+  text-align: center;
+  margin-top: 40px;
+  font-style: italic;
+  color: #275c77;
+}
+
+/* 🔹 SERVICIOS ADICIONALES */
+.servicios {
+  background: #f7f7f7;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 3px solid #ff6600;
+  border-bottom: 3px solid #ff6600;
+}
+
+.servicios h2 {
+  color: #ff6600;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.servicio {
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.servicio h3 {
+  color: #275c77;
+  margin-bottom: 10px;
+}
+
+/* 🔹 PIE DE PÁGINA */
+footer {
+  background: linear-gradient(90deg, #111111, #2c2c2c, #1f1f1f);
+  color: #ffffff;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 3px solid #ff6600;
+}
+
+footer h2 {
+  color: #ff6600;
+}
+
+footer h3 {
+  color: #ff6600;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #ff6600;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin: 5px 0;
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+.copy {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+/* 📱 Responsive */
+@media (max-width: 700px) {
+  header img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .seccion {
+    padding: 25px;
+    margin: 20px;
+  }
+}
