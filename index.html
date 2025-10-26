@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundiciones Sandoval</title>
+  <link rel="stylesheet" href="styles-index.css">
+</head>
+
+<body>
+  <!-- 🔶 Encabezado -->
+  <header>
+    <div>
+      <div>
+      <a href="index.html">
+      <img src="IMAGENES/ICONO_LOGO.png" width= "80" alt="Logo Fundiciones Sandoval"></a>
+      
+      <h1>Fundiciones Sandoval</h1>
+    </div>
+
+  <!-- 🔸 Menú de navegación -->
+  <nav>
+    <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="productos.html">Productos/Servicios</a></li>
+    <li><a href="contactos.html">Contactos</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+
+<section class="galeria">
+  <h2>Experiencias de Fundiciones Sandoval</h2>
+  <div class="grid-galeria">
+    <img src="IMAGENES/PUYANDO.jpeg" alt="Fundición 1" onclick="abrirLightbox(0)">
+    <img src="IMAGENES/MOLDEANDO.jpeg" alt="Fundición 2" onclick="abrirLightbox(1)">
+    <img src="IMAGENES/VACIANDO.jpeg" alt="Fundición 5" onclick="abrirLightbox(3)">
+    <img src="IMAGENES/MOLDEANDO 1.jpeg" alt="Fundición 4" onclick="abrirLightbox(4)">
+  </div>
+</section>
+
+<div id="lightbox" class="lightbox">
+ <span class="cerrar" onclick="cerrarLightbox()">&times;</span>
+ <span class="anterior" onclick="cambiarImagen(-1)">&#10094</span>
+ <img class="lightbox-img" id="imagenAmpliada">
+ <span class="siguiente" onclick="cambiarImagen(1)">&#10095</span>
+</div>
+
+  <!-- 🔹 Sección de bienvenida -->
+  <section class="contenido seccion">
+    <h2>Bienvenidos a Fundiciones Sandoval</h2>
+    <p>
+      En <strong>Fundiciones Sandoval</strong> somos especialistas en la fundición de metales, 
+      ofreciendo soluciones industriales que garantizan seguridad, durabilidad y precisión 
+      en cada pieza. Contamos con un buen equipo de trabajo capacitado para cumplir con las 
+      expectativas de nuestros clientes.
+    </p>
+  </section>
+
+  <!-- 🔹 Sección de misión -->
+  <section class="datos seccion">
+    <h2>Nuestra Misión</h2>
+    <p>
+      Proveer productos de fundición de alta calidad que satisfagan las necesidades 
+      específicas de nuestros clientes, contribuyendo al desarrollo industrial 
+      con un enfoque en la innovación y la sostenibilidad.
+    </p>
+  </section>
+
+  <!-- 🔹 Sección de visión -->
+  <section class="datos seccion gris">
+    <h2>Nuestra Visión</h2>
+    <p>
+      Ser reconocidos como líderes en el sector de fundición de metales a nivel 
+      nacional e internacional, destacándonos por nuestra excelencia operativa 
+      y compromiso con la calidad.
+    </p>
+  </section>
+
+  <!-- 🔹 Sección de por qué elegirnos -->
+  <section class="datos seccion">
+    <h2>¿Por qué elegirnos?</h2>
+    <ul>
+      <li>Experiencia comprobada en el sector.</li>
+      <li>Compromiso con la calidad y la satisfacción del cliente.</li>
+      <li>Buen equipo de trabajo y altamente capacitado.</li>
+      <li>Soluciones personalizadas para cada proyecto.</li>
+    </ul>
+  </section>
+
+  <!-- 🔸 Pie de página -->
+  <footer>
+    <h2 id="contacto">Contáctanos</h2>
+
+    <h3>📍 Dirección</h3>
+    <p>🏢 Carrera 10Sur #90B-240, Barrio Santa María, Barranquilla, Colombia</p>
+
+    <h3>🕒 Horarios de atención</h3>
+    <p>🗓️ Lunes a Sábados: 8:00 am - 5:00 pm</p>
+
+    <h3>🌐 Redes sociales</h3>
+    <ul>
+      <li><a href="https://web.facebook.com/profile.php?id=61581784914231" target="_blank">Facebook</a></li>
+      <li><a href="https://www.instagram.com/fundicionessandoval" target="_blank">Instagram</a></li>
+      <li><a href="https://wa.me/573017769299" target="_blank">WhatsApp</a></li>
+    </ul>
+
+    <h3>Correo Electronico</h3>
+    <p>isandoval320@hotmail.com</p>
+
+    <h3>📞 Teléfonos</h3>
+    <p>+57 301 776 9299</p>
+
+    <p class="copy">&copy; 2025 Fundiciones Sandoval — Todos los derechos reservados</p>
+  </footer>
+
+ <script>
+  const imagenes = [
+    "IMAGENES/PUYANDO.jpeg",
+    "IMAGENES/MOLDEANDO.jpeg",
+    "IMAGENES/MOLDEANDO 1.jpeg",
+    "IMAGENES/VACIANDO.jpeg",
+  ];
+
+  let indiceActual = 0;
+
+  function abrirLightbox(indice) {
+    indiceActual = indice;
+    const lightbox = document.getElementById("lightbox");
+    const imagenAmpliada = document.getElementById("imagenAmpliada");
+    lightbox.style.display = "flex";
+    imagenAmpliada.src = imagenes[indiceActual];
+  }
+
+  function cerrarLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  function cambiarImagen(direccion) {
+    indiceActual += direccion;
+    if (indiceActual < 0) indiceActual = imagenes.length - 1;
+    if (indiceActual >= imagenes.length) indiceActual = 0;
+    document.getElementById("imagenAmpliada").src = imagenes[indiceActual];
+  }
+
+  // Cerrar lightbox con tecla Esc
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") cerrarLightbox();
+    if (e.key === "ArrowRight") cambiarImagen(1);
+    if (e.key === "ArrowLeft") cambiarImagen(-1);
+  });
+</script>
+
+</body>
+</html>
