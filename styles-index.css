@@ -115,15 +115,214 @@ footer a:hover {
   color: #cccccc;
 }
 
-/* 📱 Responsive */
-@media (max-width: 700px) {
+/* --- 🔧 AJUSTES RESPONSIVE PARA CELULARES Y TABLETS --- */
+@media (max-width: 1024px) {
   header img {
     width: 120px;
-    height: 120px;
+    height: auto;
   }
 
-  .seccion {
-    padding: 25px;
-    margin: 20px;
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .lista-productos {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .lista-productos img {
+    height: 160px;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+}
+
+/* --- TABLETS Y PANTALLAS MEDIANAS --- */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .contenido {
+    padding: 20px;
+  }
+
+  .lista-productos {
+    grid-template-columns: 1fr;
+  }
+
+  .lista-productos li {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  footer h2 {
+    font-size: 1.4rem;
+  }
+
+  footer h3 {
+    font-size: 1rem;
+  }
+
+  footer p,
+  footer a {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- CELULARES PEQUEÑOS --- */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header img {
+    width: 100px;
+    height: auto;
+  }
+
+  .contenido p,
+  .lista-productos p {
+    font-size: 0.9rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 15px 5px;
+  }
+
+  footer h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* --- AJUSTE DE ANCHO COMPLETO HEADER Y FOOTER --- */
+header,
+footer {
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+.galeria {
+  padding: 40px 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.galeria h2 {
+  color: #ff6600;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-galeria img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+  
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.anterior, .siguiente {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.anterior:hover, .siguiente:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.anterior {left: 30px;}
+.siguiente {right: 30px;}
+
+@media (max-width: 768px) {
+  .grid-galeria img {
+    height: 180px;
+  }
+  .anterior, .siguiente {
+    font-size: 30px;
+    padding: 6px;
   }
 }
